@@ -1,3 +1,5 @@
+package DS;
+
 public class FibonacciByVar {
     public static void main(String[] args) {
         int num1=0;

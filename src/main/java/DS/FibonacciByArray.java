@@ -1,3 +1,5 @@
+package DS;
+
 public class FibonacciByArray {
     public static void main(String[] args) {
         int n=10;
