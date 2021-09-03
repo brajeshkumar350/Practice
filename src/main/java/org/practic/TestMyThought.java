@@ -21,10 +21,9 @@ public class TestMyThought {
                 .sorted(Comparator.comparingInt(Student::getAge).thenComparing(Comparator.comparing(Student::getFirstName)))
                 .collect(Collectors.toList());
 
-        sortedList.forEach(stu->{
-            System.out.println(stu.getFirstName());
+        sortedList.stream().map(student -> student.getFirstName()).forEach(System.out::println);
 
-        });
+
         System.out.println("---------------------");
         Map<String,String> map=new HashMap<>();
         sortedList.forEach(stu->{

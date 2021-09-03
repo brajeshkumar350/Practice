@@ -1,4 +1,4 @@
-package DS;
+package DS.number;
 
 public class FibonacciByVar {
     public static void main(String[] args) {

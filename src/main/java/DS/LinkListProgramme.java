@@ -8,7 +8,16 @@ public class LinkListProgramme {
         linkedList.add(13);
         linkedList.add(14);
 
-        linkedList.printList();
+        //linkedList.printList();
+
+        MyLinkedList list = new MyLinkedList();
+        list.head = new Nodes(85);
+        list.head.next = new Nodes(15);
+        list.head.next.next = new Nodes(4);
+        list.head.next.next.next = new Nodes(20);
+
+        list.reverse(list.head);
+        list.printList();
 
     }
 }
@@ -50,5 +59,31 @@ class MyLinkedList
             System.out.println(temp.val+" ");
             temp=temp.next;
         }
+    }
+
+    Nodes reverse(Nodes start)
+    {
+        Nodes current=start;
+        Nodes prev=null;
+        while(current!=null)
+        {
+            Nodes temp=current.next;
+            current.next=prev;
+            prev=current;
+            current=temp;
+        }
+        return prev;
+
+    }
+    Nodes reverseByRec(Nodes head)
+    {
+        while(head==null || head.next==null){
+            return head;}
+        Nodes newNodes=reverse(head.next);
+        Nodes headNext=head.next;
+        headNext=head;
+        head.next=null;
+        return newNodes;
+
     }
 }

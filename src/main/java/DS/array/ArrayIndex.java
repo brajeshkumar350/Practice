@@ -1,4 +1,4 @@
-package DS;
+package DS.array;
 
 //result:- 1,8,3,6,5
 //skip:2pow(n) and print
