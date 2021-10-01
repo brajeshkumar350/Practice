@@ -1,0 +1,17 @@
+GET	: Read Operation only	 Uses only for the read operation.GET should be idempotent
+POST:	Create new resource	 Should only be used to create a new resource
+PUT:	Update / Replace Resource	Update an existing resource.Think of PUT method as putting a resource
+DELETE:	Delete Resource	To remove a given resource.DELETE operation is idempotent
+PATCH:	Partial Update / Modify	 Partial update to a resource should happen through PATCH
+TRACE:Performs a message loop-back test along the path to the target resource.
+OPTIONS : Describes the communication options for the target resource.
+
+101-continue
+200-ok
+201 created
+202-accepted
+400-bad request
+401:- unauthorized
+403: forbidden
+404: page not found
+500: internal server error
