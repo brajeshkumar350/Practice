@@ -6,10 +6,10 @@ import java.util.Set;
 public class FindPairWithGiveSumInArray
 {
     public static void main(String[] args) {
-        int [] arr={2,4,6,7,8,9};
-        int k=15;
+        int [] arr={8, 7, 2, 5, 3, 1};
+        int k=10;
         int len=arr.length;
-        FindByIteration(arr, k, len);
+      //  FindByIteration(arr, k, len);
         FindSumBySet(arr, k, len);
     }
 
