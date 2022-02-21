@@ -41,8 +41,8 @@ public class Tree {
     public  static void reversetraver(Node node)
     {
         if(node==null)return;
-        traver(node.left);
-        traver(node.right);
+        reversetraver(node.left);
+        reversetraver(node.right);
         System.out.print(node.key+" , ");
     }
 
