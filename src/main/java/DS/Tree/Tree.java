@@ -62,6 +62,23 @@ public class Tree {
         bottomView(node.right,map,step+1);
         return map;
     }
+
+    static boolean isBSTUtil(Node node, int min, int max)
+    {
+        /* an empty tree is BST */
+        if (node == null)
+            return true;
+
+        /* false if this node violates the min/max constraints */
+        if (node.key < min || node.key > max)
+            return false;
+
+        /* otherwise check the subtrees recursively
+        tightening the min/max constraints */
+        // Allow only distinct values
+        return (isBSTUtil(node.left, min, node.key-1) &&
+                isBSTUtil(node.right, node.key+1, max));
+    }
     static int max_level = 0;
     public static void  leftView(Node node, int level)
     {
